@@ -12,21 +12,10 @@
     <img src="https://david-dm.org/ethjs/ethjs-contract/dev-status.svg" alt="devDependency Status" />
   </a>
 
-  <!-- Build Status -->
-  <a href="https://travis-ci.org/ethjs/ethjs-contract">
-    <img src="https://travis-ci.org/ethjs/ethjs-contract.svg"
-    alt="Build Status" />
-  </a>
-
   <!-- NPM Version -->
   <a href="https://www.npmjs.org/package/ethjs-contract">
     <img src="http://img.shields.io/npm/v/ethjs-contract.svg"
     alt="NPM version" />
-  </a>
-
-  <!-- Test Coverage -->
-  <a href="https://coveralls.io/r/ethjs/ethjs-contract">
-    <img src="https://coveralls.io/repos/github/ethjs/ethjs-contract/badge.svg" alt="Test Coverage" />
   </a>
 
   <!-- Javascript Style -->
