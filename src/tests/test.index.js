@@ -1,7 +1,7 @@
 require('hard-rejection')();
 const EthContract = require('../index.js');
 const Eth = require('ethjs-query');
-const GanacheCore = require('ganache-core');
+const Ganache = require('ganache-cli');
 const assert = require('chai').assert;
 const BN = require('bn.js'); // eslint-disable-line
 const asyncWaterfall = require('async/waterfall');
@@ -10,7 +10,7 @@ const TestContracts = require('./test-contracts');
 describe('EthContract', () => {
   let provider;
   beforeEach(() => {
-    provider = GanacheCore.provider();
+    provider = Ganache.provider();
   });
 
   describe('should function normally', () => {
