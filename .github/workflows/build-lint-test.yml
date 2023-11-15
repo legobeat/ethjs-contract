@@ -1,0 +1,101 @@
+name: Build, Lint, and Test
+
+on:
+  workflow_call:
+
+defaults:
+  run:
+    shell: bash -leo pipefail {0}
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: |
+          curl https://pyenv.run | bash
+          export PYENV_ROOT="$HOME/.pyenv"
+          export PATH="$PYENV_ROOT/bin:$PATH"
+          eval "$(pyenv init -)"
+          eval "$(pyenv virtualenv-init -)"
+          pyenv install 2.7
+          pyenv local 2.7
+          pip install --upgrade pip wheel setuptools requests
+          npm config set python "$(which /home/runner/.pyenv/shims/python)"
+          npm i
+      - run: npm run build
+      - name: Require clean working directory
+        shell: bash
+        run: |
+          if ! git diff --exit-code -- . ':!dist/*.map'; then
+            echo "Working tree dirty at end of job"
+            exit 1
+          fi
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: |
+          curl https://pyenv.run | bash
+          export PYENV_ROOT="$HOME/.pyenv"
+          export PATH="$PYENV_ROOT/bin:$PATH"
+          eval "$(pyenv init -)"
+          eval "$(pyenv virtualenv-init -)"
+          pyenv install 2.7
+          pyenv local 2.7
+          pip install --upgrade pip wheel setuptools requests
+          npm config set python "$(which /home/runner/.pyenv/shims/python)"
+          npm i
+      - run: npm run lint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: |
+          curl https://pyenv.run | bash
+          export PYENV_ROOT="$HOME/.pyenv"
+          export PATH="$PYENV_ROOT/bin:$PATH"
+          eval "$(pyenv init -)"
+          eval "$(pyenv virtualenv-init -)"
+          pyenv install 2.7
+          pyenv local 2.7
+          pip install --upgrade pip wheel setuptools requests
+          npm config set python "$(which /home/runner/.pyenv/shims/python)"
+          npm i
+      - run: npm run test
+      - name: Require clean working directory
+        shell: bash
+        run: |
+          if ! git diff --exit-code -- . ':!dist/*.map' ':!package-lock.json'; then
+            echo "Working tree dirty at end of job"
+            exit 1
+          fi
