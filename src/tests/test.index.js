@@ -470,7 +470,7 @@ async function deploySimpleStore({
 }
 
 async function watchEventOnce(contractEvent) {
-  return await new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     contractEvent.watch((watchErr) => {
       if (watchErr) {
         return reject(watchErr);
