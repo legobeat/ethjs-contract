@@ -5,7 +5,7 @@ All information for developers using `ethjs-contract` should consult this docume
 ## Install
 
 ```
-npm install --save ethjs-contract
+npm install --save @metamask/ethjs-contract
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install --save ethjs-contract
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const EthContract = require('ethjs-contract');
+const EthContract = require('@metamask/ethjs-contract');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 const contract = new EthContract(eth);
 
@@ -48,7 +48,7 @@ filter.stopWatching((error, result) => {
 
 ### constructor
 
-[index.js:ethjs-contract](../../../blob/master/src/index.js "Source code on GitHub")
+[index.js:ethjs-contract](../../../blob/main/src/index.js "Source code on GitHub")
 
 Intakes an `ethjs-query` instance, outputs a single `contract` instance.
 
@@ -61,14 +61,14 @@ Result `contract` **Object**.
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const EthContract = require('ethjs-contract');
+const EthContract = require('@metamask/ethjs-contract');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 const contract = new EthContract(eth);
 ```
 
 ### contract
 
-[index.js:ethjs-contract](../../../blob/master/src/index.js "Source code on GitHub")
+[index.js:ethjs-contract](../../../blob/main/src/index.js "Source code on GitHub")
 
 Intakes the contract Ethereum standard ABI schema, optionally the contract bytecode and default transaction object. Outputs a `ContractFactory` instance for the contract.
 
@@ -83,7 +83,7 @@ Result `ContractFactory` **Object**.
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const EthContract = require('ethjs-contract');
+const EthContract = require('@metamask/ethjs-contract');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 const contract = new EthContract(eth);
 
@@ -112,7 +112,7 @@ eth.accounts().then((accounts) => {
 
 ### ContractFactory.new
 
-[index.js:ethjs-contract](../../../blob/master/src/index.js "Source code on GitHub")
+[index.js:ethjs-contract](../../../blob/main/src/index.js "Source code on GitHub")
 
 The contract factory has two methods, 'at' and 'new' which can be used to create the contract instane. the `at` method is used to create a `Contract` instance for a contract that has already been deployed to the Ethereum blockchain (testnet, livenet, local or otherwise). The `new` method is used to deploy the contract to the current chain.
 
@@ -128,7 +128,7 @@ Result a single Promise **Object** instance.
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const EthContract = require('ethjs-contract');
+const EthContract = require('@metamask/ethjs-contract');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 const contract = new EthContract(eth);
 
@@ -154,7 +154,7 @@ eth.accounts().then((accounts) => {
 
 ### ContractFactory.at
 
-[index.js:ethjs-contract](../../../blob/master/src/index.js "Source code on GitHub")
+[index.js:ethjs-contract](../../../blob/main/src/index.js "Source code on GitHub")
 
 The contract factory has two methods, 'at' and 'new' which can be used to create the `Contract` instane.
 
@@ -167,7 +167,7 @@ Result a single `Contract` **Object** instance.
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const EthContract = require('ethjs-contract');
+const EthContract = require('@metamask/ethjs-contract');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 const contract = new EthContract(eth);
 
@@ -196,7 +196,7 @@ eth.accounts().then((accounts) => {
 
 ### Contract
 
-[index.js:ethjs-contract](../../../blob/master/src/index.js "Source code on GitHub")
+[index.js:ethjs-contract](../../../blob/main/src/index.js "Source code on GitHub")
 
 The contract instance is meant to simulate a deployed Ethereum contract interface as a javascript object. All specified call methods are attached to this object (as specified by the contract ABI schema array).
 
@@ -215,7 +215,7 @@ You will notice the `simpleStore` instance makes all these methods available to 
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const EthContract = require('ethjs-contract');
+const EthContract = require('@metamask/ethjs-contract');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 const contract = new EthContract(eth);
 
@@ -284,13 +284,10 @@ new EthContract(...);
 
 Note, even though `ethjs` should have transformed and polyfilled most of the requirements to run this module across most modern browsers. You may want to look at an additional polyfill for extra support.
 
-Use a polyfill service such as `Polyfill.io` to ensure complete cross-browser support:
-https://polyfill.io/
-
 ## Latest Webpack Figures
 
 ```
-Hash: 7a3fde336c393e27e46b                  
+Hash: 7a3fde336c393e27e46b
 Version: webpack 2.1.0-beta.15
 Time: 891ms
                 Asset    Size  Chunks             Chunk Names
