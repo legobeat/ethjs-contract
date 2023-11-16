@@ -1,39 +1,59 @@
-# 0.1.6 -- BN formatting update
+# Changelog
+All notable changes to this project will be documented in this file.
 
-1. Bn formatting update
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-# 0.1.5 -- remove ethjs-sha3 for js-sha3
+## [Unreleased]
 
-1. Removed `ethjs-sha3` for `js-sha3`.
+## [0.1.6]
+### Changed
+- Bn formatting update
 
-# 0.1.4 -- fix object mutation
+## [0.1.5]
+### Removed
+- Removed `ethjs-sha3` for `js-sha3`.
 
-1. Fix object mutation with eth_call, eth_sendTransaction
+## [0.1.4]
+### Fixed
+- Fix object mutation with eth_call, eth_sendTransaction
 
-# 0.1.3 -- config fixes
+## [0.1.3]
+### Changed
+- Webpack config updates
+- Build config updates
 
-1. Webpack config updates
-2. Build config updates
+## [0.1.2]
+### Changed
+- Updated ethjs-abi module
+- More docs
 
-# 0.1.2 -- ethjs-abi update
+## [0.1.1]
+### Changed
+- New Event object
+- Package upgrades and fixes
+- More docs
 
-1. Updated ethjs-abi module
-2. More docs
+## [0.1.0]
+### Changed
+- promises, full coverage
+  - Promises and callbacks on calls, new, event watchers
+  - More coverage
+  - Package upgrades
 
-# 0.1.1 -- new event object
+## [0.0.1]
+### Added
+- ethjs-contract
+  - Basic testing
+  - Basic docs
+  - License
 
-1. New Event object
-2. Package upgrades and fixes
-3. More docs
-
-# 0.1.0 -- promises, full coverage
-
-1. Promises and callbacks on calls, new, event watchers
-2. More coverage
-3. Package upgrades
-
-# 0.0.1 -- ethjs-contract
-
-1. Basic testing
-2. Basic docs
-3. License
+[Unreleased]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.6...HEAD
+[0.1.6]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.5...v0.1.6
+[0.1.5]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.4...v0.1.5
+[0.1.4]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.3...v0.1.4
+[0.1.3]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.2...v0.1.3
+[0.1.2]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.1...v0.1.2
+[0.1.1]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/MetaMask/ethjs-contract/compare/v0.0.1...v0.1.0
+[0.0.1]: https://github.com/MetaMask/ethjs-contract/releases/tag/v0.0.1
