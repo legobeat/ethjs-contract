@@ -1,26 +1,10 @@
 ## ethjs-contract
 
 <div>
-  <!-- Dependency Status -->
-  <a href="https://david-dm.org/ethjs/ethjs-contract">
-    <img src="https://david-dm.org/ethjs/ethjs-contract.svg"
-    alt="Dependency Status" />
-  </a>
-
-  <!-- devDependency Status -->
-  <a href="https://david-dm.org/ethjs/ethjs-contract#info=devDependencies">
-    <img src="https://david-dm.org/ethjs/ethjs-contract/dev-status.svg" alt="devDependency Status" />
-  </a>
-
   <!-- NPM Version -->
-  <a href="https://www.npmjs.org/package/ethjs-contract">
-    <img src="http://img.shields.io/npm/v/ethjs-contract.svg"
+  <a href="https://www.npmjs.org/package/@metamask/ethjs-contract">
+    <img src="http://img.shields.io/npm/v/@metamask/ethjs-contract.svg"
     alt="NPM version" />
-  </a>
-
-  <!-- Javascript Style -->
-  <a href="http://airbnb.io/javascript/">
-    <img src="https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg" alt="js-airbnb-style" />
   </a>
 </div>
 
@@ -33,7 +17,7 @@ NOTE. Module not ready for use, still in heavy development.
 ## Install
 
 ```
-npm install --save ethjs-contract
+npm install --save @metamask/ethjs-contract
 ```
 
 ## Usage
@@ -41,7 +25,7 @@ npm install --save ethjs-contract
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const EthContract = require('ethjs-contract');
+const EthContract = require('@metamask/ethjs-contract');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 const contract = new EthContract(eth);
 
@@ -103,13 +87,13 @@ There is always a lot of work to do, and will have many rules to maintain. So pl
 
 Please consult our [Code of Conduct](CODE_OF_CONDUCT.md) docs before helping out.
 
-We communicate via [issues](https://github.com/ethjs/ethjs-contract/issues) and [pull requests](https://github.com/ethjs/ethjs-contract/pulls).
+We communicate via [issues](https://github.com/MetaMask/ethjs-contract/issues) and [pull requests](https://github.com/ethjs/ethjs-contract/pulls).
 
 ## Important documents
 
 - [Changelog](CHANGELOG.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
-- [License](https://raw.githubusercontent.com/ethjs/ethjs-contract/master/LICENSE)
+- [License](https://raw.githubusercontent.com/MetaMask/ethjs-contract/master/LICENSE)
 
 ## Licence
 

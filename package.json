@@ -74,7 +74,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/ethjs/ethjs-contract/issues"
+    "url": "https://github.com/MetaMask/ethjs-contract/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
@@ -187,7 +187,7 @@
     "lib",
     "src"
   ],
-  "homepage": "https://github.com/ethjs/ethjs-contract#readme",
+  "homepage": "https://github.com/MetaMask/ethjs-contract#readme",
   "keywords": [
     "ethereum",
     "events",
@@ -198,7 +198,7 @@
     "lint:eslint": "*.js"
   },
   "main": "lib/index.js",
-  "name": "ethjs-contract",
+  "name": "@metamask/ethjs-contract",
   "pre-commit": "build",
   "publishConfig": {
     "access": "public",
@@ -206,7 +206,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ethjs/ethjs-contract.git"
+    "url": "https://github.com/MetaMask/ethjs-contract"
   },
   "scripts": {
     "build": "npm run build:commonjs && npm run test:lib && npm run build:umd && npm run build:umd:min",
