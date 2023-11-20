@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x]
+        node-version: [8.x, 10.x, 12.x, 14.x, 16.x, 18.x, 20.x]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -30,6 +30,7 @@ jobs:
           pyenv install 2.7
           pyenv local 2.7
           pip install --upgrade pip wheel setuptools requests
+          npm i -g npm@6
           npm config set python "$(which /home/runner/.pyenv/shims/python)"
           npm i
       - run: npm run build
@@ -46,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x]
+        node-version: [12.x]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -72,7 +73,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x]
+        node-version: [8.x, 10.x, 12.x, 14.x, 16.x, 18.x, 20.x]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -89,6 +90,7 @@ jobs:
           pyenv install 2.7
           pyenv local 2.7
           pip install --upgrade pip wheel setuptools requests
+          npm i -g npm@6
           npm config set python "$(which /home/runner/.pyenv/shims/python)"
           npm i
       - run: npm run test
