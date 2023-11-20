@@ -1,6 +1,6 @@
 require('hard-rejection')();
 const EthContract = require('../index.js');
-const Eth = require('ethjs-query');
+const Eth = require('@metamask/ethjs-query');
 const Ganache = require('ganache-cli');
 const assert = require('chai').assert;
 const BN = require('bn.js'); // eslint-disable-line
