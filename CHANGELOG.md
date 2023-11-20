@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0]
+### Changed
+- Rename package from `ethjs-contract` to `@metamask/ethjs-contract` ([#7](https://github.com/MetaMask/ethjs-contract/pull/7))
+- Restrict compatible node versions to ^8.17 ([#2](https://github.com/MetaMask/ethjs-contract/pull/2))
+
+### Fixed
+- Add missing dependency `promise-to-callback` ([#5](https://github.com/MetaMask/ethjs-contract/pull/5))
+
 ## [0.1.6]
 ### Changed
 - Bn formatting update
@@ -48,7 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Basic docs
   - License
 
-[Unreleased]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.6...HEAD
+[Unreleased]: https://github.com/MetaMask/ethjs-contract/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.6...v0.3.0
 [0.1.6]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/MetaMask/ethjs-contract/compare/v0.1.3...v0.1.4
