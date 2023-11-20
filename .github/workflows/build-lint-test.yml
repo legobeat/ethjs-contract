@@ -30,6 +30,7 @@ jobs:
           pyenv install 2.7
           pyenv local 2.7
           pip install --upgrade pip wheel setuptools requests
+          npm i -g npm@6
           npm config set python "$(which /home/runner/.pyenv/shims/python)"
           npm i
       - run: npm run build
@@ -89,6 +90,7 @@ jobs:
           pyenv install 2.7
           pyenv local 2.7
           pip install --upgrade pip wheel setuptools requests
+          npm i -g npm@6
           npm config set python "$(which /home/runner/.pyenv/shims/python)"
           npm i
       - run: npm run test
