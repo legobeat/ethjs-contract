@@ -1,10 +1,10 @@
 require('hard-rejection')();
-const EthContract = require('../index.js');
 const Eth = require('@metamask/ethjs-query');
 const Ganache = require('ganache-cli');
-const assert = require('chai').assert;
+const { assert } = require('chai');
 const BN = require('bn.js'); // eslint-disable-line
 const asyncWaterfall = require('async/waterfall');
+const EthContract = require('../index');
 const TestContracts = require('./test-contracts');
 
 describe('EthContract', () => {
@@ -428,7 +428,9 @@ describe('EthContract', () => {
   });
 });
 
-async function deploySimpleStore({ eth, defaultTxObject, newOpts = {}, contractBytecode }) {
+async function deploySimpleStore({
+  eth, defaultTxObject, newOpts = {}, contractBytecode,
+}) {
   const contract = new EthContract(eth);
   assert.equal(typeof contract, 'function');
 
@@ -498,7 +500,9 @@ async function simpleStorePerformSetAndWatchOnce({ simpleStore }) {
   return { watchPromise };
 }
 
-async function simpleStorePerformSetAndGet({ eth, simpleStore, setNumberValue = 42, setOpts = {} }) {
+async function simpleStorePerformSetAndGet({
+  eth, simpleStore, setNumberValue = 42, setOpts = {},
+}) {
   const setTxHash = await simpleStore.set(setNumberValue, setOpts);
   assert.equal(typeof setTxHash, 'string');
 

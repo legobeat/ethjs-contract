@@ -2,8 +2,8 @@ const abi = require('ethjs-abi'); // eslint-disable-line
 const EthFilter = require('@metamask/ethjs-filter'); // eslint-disable-line
 const getKeys = require('@metamask/ethjs-util').getKeys; // eslint-disable-line
 const keccak256 = require('js-sha3').keccak_256; // eslint-disable-line
-const hasTransactionObject = require('./has-tx-object');
 const promiseToCallback = require('promise-to-callback');
+const hasTransactionObject = require('./has-tx-object');
 
 module.exports = Contract;
 
@@ -38,7 +38,7 @@ function Contract(opts = {}) {
         topics: filterTopcis,
       });
       const filterOpts = Object.assign({}, argsObject, {
-        decoder: (logData) => abi.decodeEvent(methodObject, logData, filterTopcis),
+        decoder: logData => abi.decodeEvent(methodObject, logData, filterTopcis),
         defaultFilterObject,
       });
 
@@ -98,5 +98,5 @@ function Contract(opts = {}) {
 }
 
 function getCallableMethodsFromABI(contractABI) {
-  return contractABI.filter((json) => ((json.type === 'function' || json.type === 'event') && json.name.length > 0));
+  return contractABI.filter(json => ((json.type === 'function' || json.type === 'event') && json.name.length > 0));
 }

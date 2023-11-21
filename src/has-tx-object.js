@@ -19,7 +19,7 @@ function hasTransactionObject(args) {
   }
   // txParams object: good
   const keys = Object.keys(lastArg);
-  const hasMatchingKeys = txObjectProperties.some((value) => keys.includes(value));
+  const hasMatchingKeys = txObjectProperties.some(value => keys.includes(value));
   if (hasMatchingKeys) {
     return true;
   }
