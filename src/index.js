@@ -54,5 +54,5 @@ function EthContract(query) {
 }
 
 function getConstructorFromABI(contractABI) {
-  return contractABI.filter((json) => (json.type === 'constructor'))[0];
+  return contractABI.filter(json => (json.type === 'constructor'))[0];
 }
