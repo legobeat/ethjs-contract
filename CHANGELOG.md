@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.1]
+### Changed
+- Update `@metamask/ethjs-filter` from `^0.2.0` to `^0.3.0` ([#21](https://github.com/MetaMask/ethjs-contract/pull/21))
+- Update `@metamask/ethjs-util` from `^0.2.0` to `^0.3.0` ([#21](https://github.com/MetaMask/ethjs-contract/pull/21))
+
+### Fixed
+- Remove dependency `babel-runtime@^6.26.0` ([#21](https://github.com/MetaMask/ethjs-contract/pull/21))
+
 ## [0.4.0]
 ### Changed
 - **BREAKING**: `@babel/runtime@^7.0.0` is now a peerDependency ([#6](https://github.com/MetaMask/ethjs-contract/pull/6))
@@ -83,7 +91,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Basic docs
   - License
 
-[Unreleased]: https://github.com/MetaMask/ethjs-contract/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/MetaMask/ethjs-contract/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/MetaMask/ethjs-contract/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/MetaMask/ethjs-contract/compare/v0.3.4...v0.4.0
 [0.3.4]: https://github.com/MetaMask/ethjs-contract/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/MetaMask/ethjs-contract/compare/v0.3.2...v0.3.3
