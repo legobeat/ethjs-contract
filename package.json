@@ -76,7 +76,7 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@metamask/ethjs-filter": "^0.2.0",
+    "@metamask/ethjs-filter": "^0.3.0",
     "@metamask/ethjs-util": "^0.2.0",
     "babel-runtime": "^6.26.0",
     "ethjs-abi": "^0.2.0",
